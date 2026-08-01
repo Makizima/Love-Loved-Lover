@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+		<head>
+		<style> body {
+				background-color: #ffeef8;
+				padding: 0px;
+				margin: 0;
+			
+			      }
+			h1 { font-family: "Great Vibes", cursive; }
+
+			.box1 {
+				background-color: #FF8559;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				font-size: 24px;
+			}
+
+			.box2 {
+				background-color: #40E0D0;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				font-size: 24px;
+			}
+
+
+			.box3 {
+				background-color: #F88E9E;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				font-size: 24px;
+			}
+
+
+			.box4 {
+				background-color: #E0AFFF;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				font-size: 24px;
+			}
+
+
+
+			.container {
+				display: flex;
+				flex-direction: column;
+				gap: 0px;
+				background-color: transparent;
+				height: 100vh;
+				width: 100vw;
+			}
+			button {
+				background: #E0AFFF;
+				color: white;
+				border: none;
+				padding: 0;
+				height: 25vh;
+				width: 100vw;
+				margin: 0px;
+				font-size: 32px;
+				cursor: pointer;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				transition: 0.3s;
+			}
+
+			.button {
+				display: flex;
+				gap: 7px;
+				justify-content: center;
+			}
+
+			button:hover {
+				background: #4E545C;
+				transform: scale(1.05);
+			}
+
+			.image-popup {
+				display:none;
+				position: fixed;
+				z-index: 1000;
+				left: 0;
+				top: 0;
+				width: 100%;
+				height: 100%;
+				background-color: rgba(0, 0, 0, 0.8);
+				justify-content: center;
+				align-items: center;
+				animation: fadeIn 0.3s;
+			}
+			
+			.image-popup img {
+				max-width: 90%;
+				max-height: 80%;
+				border-radius: 20px;
+				box-shadow: 0 0 30px rgba(255, 255, 255, 0.3);
+				animation: zoomIn 0.4s ease-out;
+			}
+
+			.close-btn {
+				position: absolute;
+				top: 20px;
+				right: 40px;
+				color: white;
+				font-size: 50px;
+				font-weight: bold;
+				cursor: pointer;
+			}
+			
+			.close-btn:hover {
+				color: #ccc;
+			}
+
+			@keyframes fadeIn {
+				from { opacity: 0; }
+				to { opacity: 1; }
+			}
+
+			@keyframes zoomIn {
+				0% { transform: scale(0.3); opacity: 0; }
+				70% {transform: scale(1.1); }
+				100% {transform: scale(1); opacity: 1; }
+			}
+
+			.video-popup {
+				display: none;
+				position: fixed;
+				z-index: 1000;
+				left: 0; top: 0;
+				width: 100%; height: 100%;
+				background-color: rgba(0, 0, 0, 0.9);
+				justify-content: center;
+				align-items: center;
+				animation: fadeIn 0.3s;
+			}
+			
+			.video-popup iframe {
+				max-width: 90%;
+				max-height: 80%;
+				border-radius: 20px;
+				box-shadow: 0 0 30px rgba(255, 255, 255, 0.3);
+				animation: zoomIn 0.4s ease-out;
+			}
+
+
+		</style>
+		</head>
+
+<body>
+
+<div class="container">
+
+	<button class="box1" onclick="showImage('https://github.com/Makizima/Love-Loved-Lover/blob/main/img1.jpg?raw=true')"><h1> Memories </h1></button>
+	<button class="box2" onclick="showImage('https://github.com/Makizima/Love-Loved-Lover/blob/main/20260801_233501.png?raw=true')"><h1> Reasons </h1></button>
+	<button class="box3" onclick="showImage('https://github.com/Makizima/Love-Loved-Lover/blob/main/20260802_000902.jpg?raw=true')"><h1> Plans </h1></button>
+	<button class="box4" onclick="showVideo('https://drive.google.com/file/d/1FmHOgObIexyeaQcHqo7csiBPuLIfMNvF/preview')"><h1> Credits </h1></button>
+</div>
+
+<div id="imagePopup" class="image-popup" onclick="hideImage()">
+	<span class="close-btn">&times;</span>
+	<img id="popupImg" src="" alt="popup image">
+</div>
+
+<div id="videoPopup" class="video-popup" onclick="hideVideo()">
+	<span class="close-btn">&times;</span>
+	<iframe id="popupVideoFrame" src="" width="90%" height="80%"
+	allow="autoplay; fullscreen"> </iframe>
+</div>
+
+
+<script>
+	function showImage(imgSrc){
+		document.getElementById("popupImg").src = imgSrc;
+		document.getElementById("imagePopup").style.display = "flex";
+	}
+	
+	function hideImage() {
+		document.getElementById("imagePopup").style.display = "none";
+	}
+
+	function showVideo(videoSrc){
+		document.getElementById("popupVideoFrame").src = videoSrc;
+		document.getElementById("videoPopup").style.display = "flex";
+
+	}
+	
+	function hideVideo() {
+		document.getElementById("popupVideoFrame").src="";
+		document.getElementById("videoPopup").style.display = "none";
+	}
+</script>
+
+</body>
+
+</html>
