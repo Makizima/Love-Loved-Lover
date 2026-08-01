@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> One Month Special <3 </title>
+		<style> body {
+				background-color: #ffeef8;
+				text-align: center;
+				font-family: Arial;
+				padding: 40px;
+			      }
+
+			h1 { color: #FFA6C9; }
+			h1 { font-size: 40px; }
+			h1 { font-family: "Dancing Script" }
+			h1 { text-shadow: 5px 0 0px rgba(0,0,0, 0.4) ; }
+
+			h2 { font-family: "Great Vibes", cursive; }
+			h2 { margin: 0;
+			     font=size: 20px; }
+
+			h3 { font-size: 24px; }
+
+			.question-row {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				gap: 15px;
+			}
+
+			img {
+				display: block;
+				margin: 0 auto;
+				border-radius: 20px;
+				opacity: 0.8;
+			}
+			.question-box {
+				background: #E0B0FF;
+				padding: 30px;
+				border-radius: 20px;
+				text-align: center;
+				width: 400px;
+				margin: 50px auto;
+			}
+			button {
+				background: #ff4fa3;
+				color: white;
+				border: none;
+				padding: 12px 25px;
+				margin: 10px;
+				border-radius: 15px;
+				font-size: 16px;
+				cursor: pointer;
+				transition: 0.3s;
+			}
+			.button {
+				display: flex;
+				gap: 7px;
+				justify-content: center;
+			}
+
+			button:hover {
+				background: #ff1a8b;
+				transform: scale(1.05);
+			}
+			#surprise-gif {
+				display: block;
+				margin: 20px auto 0;
+				width: 0;
+				height auto;
+				opacity: 0;
+				overflow: hidden;
+				transition: all 2s;
+				margin-top: 20px;
+				border-radius: 20px;
+			}
+			#surprise-gif.show {
+				display: block;
+				width: 200px;
+				height: auto;
+				opacity: 1;
+			}
+	
+</style>
+	</head>
+
+<body>
+	<h1>Kshitija X Makizima</h1>
+
+	<p><h3>Babe, Thank you for always being the best I could ask for.
+Thank you for loving me, showing me unconditional love whenever I feel like im on the edge of breaking down.
+And also, sorry for being so slow I have never been in a healthy relationship before and I hope you can teach me how to love better.
+I didn't know couples celebrated One Month of their relationship so I was skeptical of what to do, and how to do until I landed on this idea!</h3></p>
+
+	<img src="https://media.discordapp.net/attachments/1516482973245902989/1532736689108422737/image.png?ex=6a6e9887&is=6a6d4707&hm=a13ebb8d5b379f800954fcebd59e5aa025b02b8e0e4c9f212e5ac0e68fbdeca2&=&format=webp&quality=lossless&width=1280&height=833" width="800" alt="pic of us">
+
+</body>
+
+<body>
+<div class="question-box">
+<div class="question-row">
+	<h2>Are you ready?</h2>
+<div class="button">
+	<button onclick="window.location.href='main.html'">Yes</button>
+
+	<button onclick="showGif()">No</button>
+</div>
+</div>	
+	<img id="surprise-gif" src="https://media.tenor.com/Nc3aOPIr_yUAAAAi/sad-crying.gif" alt="depression">
+	
+</div>
+	<script> 
+		function showGif() { 
+					document.getElementById("surprise-gif").classList.add("show"); 
+			} 
+	</script>	
+
+</body>
+</html>
